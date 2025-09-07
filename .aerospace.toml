@@ -13,49 +13,45 @@ on-focused-monitor-changed = ['move-mouse monitor-lazy-center']
 [mode.active.binding]
     alt-space = 'mode main'
 
-    h = 'focus left'
-    j = 'focus down'
-    k = 'focus up'
-    l = 'focus right'
+    h = ['focus left', 'mode main']
+    j = ['focus down', 'mode main']
+    k = ['focus up', 'mode main']
+    l = ['focus right', 'mode main']
     
-    shift-h = 'move left'
-    shift-j = 'move down'
-    shift-k = 'move up'
-    shift-l = 'move right'
+    shift-h = ['move left', 'mode main']
+    shift-j = ['move down', 'mode main']
+    shift-k = ['move up', 'mode main']
+    shift-l = ['move right', 'mode main']
 
-    shift-minus = 'resize smart -50'
-    shift-equal = 'resize smart +50'
+    shift-minus = ['resize smart -50', 'mode main']
+    shift-equal = ['resize smart +50', 'mode main']
 
-    1 = 'workspace 1'
-    2 = 'workspace 2'
-    3 = 'workspace 3'
-    4 = 'workspace 4'
-    5 = 'workspace 5'
-    6 = 'workspace 6'
-    7 = 'workspace 7'
-    8 = 'workspace 8'
-    9 = 'workspace 9'
+    1 = ['workspace 1', 'mode main']
+    2 = ['workspace 2', 'mode main']
+    3 = ['workspace 3', 'mode main']
+    4 = ['workspace 4', 'mode main']
+    5 = ['workspace 5', 'mode main']
+    6 = ['workspace 6', 'mode main']
+    7 = ['workspace 7', 'mode main']
+    8 = ['workspace 8', 'mode main']
+    9 = ['workspace 9', 'mode main']
 
     # In addition to moving the window to given workspace, activate the workspace as well.
-    shift-1 = ['move-node-to-workspace 1', 'workspace 1']
-    shift-2 = ['move-node-to-workspace 2', 'workspace 2']
-    shift-3 = ['move-node-to-workspace 3', 'workspace 3']
-    shift-4 = ['move-node-to-workspace 4', 'workspace 4']
-    shift-5 = ['move-node-to-workspace 5', 'workspace 5']
-    shift-6 = ['move-node-to-workspace 6', 'workspace 6']
-    shift-7 = ['move-node-to-workspace 7', 'workspace 7']
-    shift-8 = ['move-node-to-workspace 8', 'workspace 8']
-    shift-9 = ['move-node-to-workspace 9', 'workspace 9']
-
-    alt-tab = 'workspace-back-and-forth'
-    alt-shift-tab = 'move-workspace-to-monitor --wrap-around next'
-    alt-shift-r = 'reload-config'
+    shift-1 = ['move-node-to-workspace 1', 'workspace 1', 'mode main']
+    shift-2 = ['move-node-to-workspace 2', 'workspace 2', 'mode main']
+    shift-3 = ['move-node-to-workspace 3', 'workspace 3', 'mode main']
+    shift-4 = ['move-node-to-workspace 4', 'workspace 4', 'mode main']
+    shift-5 = ['move-node-to-workspace 5', 'workspace 5', 'mode main']
+    shift-6 = ['move-node-to-workspace 6', 'workspace 6', 'mode main']
+    shift-7 = ['move-node-to-workspace 7', 'workspace 7', 'mode main']
+    shift-8 = ['move-node-to-workspace 8', 'workspace 8', 'mode main']
+    shift-9 = ['move-node-to-workspace 9', 'workspace 9', 'mode main']
 
     r = ['flatten-workspace-tree', 'mode main']
     f = ['layout floating tiling', 'mode main']
 
-    slash = 'layout tiles horizontal vertical'
-    comma = 'layout accordion horizontal vertical'
+    slash = ['layout tiles horizontal vertical', 'mode main']
+    comma = ['layout accordion horizontal vertical', 'mode main']
 
     alt-shift-h = ['join-with left', 'mode main']
     alt-shift-j = ['join-with down', 'mode main']
