@@ -19,13 +19,18 @@ on-focused-monitor-changed = ['move-mouse monitor-lazy-center']
     alt-8 = 'workspace 8'
     alt-9 = 'workspace 9'
 
-    alt-space = 'mode sticky'
     alt-tab = 'workspace-back-and-forth'
     alt-shift-tab = 'move-workspace-to-monitor --wrap-around next'
+    alt-space = 'mode prefix'
 
-[mode.sticky.binding]
+[mode.prefix.binding]
     alt-space = 'mode main'
     esc = 'mode main'
+
+    h = ['move left', 'mode main']
+    j = ['move down', 'mode main']
+    k = ['move up', 'mode main']
+    l = ['move right', 'mode main']
 
     alt-h = ['move left', 'mode main']
     alt-j = ['move down', 'mode main']
@@ -55,9 +60,10 @@ on-focused-monitor-changed = ['move-mouse monitor-lazy-center']
     alt-8 = ['move-node-to-workspace 8', 'workspace 8', 'mode main']
     alt-9 = ['move-node-to-workspace 9', 'workspace 9', 'mode main']
 
-    r = ['flatten-workspace-tree', 'mode main']
-    f = ['layout floating tiling', 'mode main']
-    alt-shift-r = 'reload-config'
+    # Rely on Rectangle to resize and center floating windows. This is a workaround
+    # to make Aerospace usable on ultra wide monitors.
+    f = ['layout floating tiling', 'exec-and-forget open -g "rectangle://execute-action?name=center-half"', 'mode main']
+    r = ['reload-config', 'mode main']
 
     slash = ['layout tiles horizontal vertical', 'mode main']
     comma = ['layout accordion horizontal vertical', 'mode main']
