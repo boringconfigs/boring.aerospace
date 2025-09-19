@@ -4,10 +4,10 @@ start-at-login = true
 on-focused-monitor-changed = ['move-mouse monitor-lazy-center']
 
 [mode.main.binding]
-    cmd-h = ['focus left']
-    cmd-j = ['focus down']
-    cmd-k = ['focus up']
-    cmd-l = ['focus right']
+    cmd-shift-h = ['focus left']
+    cmd-shift-j = ['focus down']
+    cmd-shift-k = ['focus up']
+    cmd-shift-l = ['focus right']
 
     cmd-1 = 'workspace 1'
     cmd-2 = 'workspace 2'
@@ -22,12 +22,12 @@ on-focused-monitor-changed = ['move-mouse monitor-lazy-center']
 
     # Make window floating and put it to center with a bit help from old friend, Rectangle app.
     # This is a workaround for widescreen displays until https://github.com/nikitabobko/AeroSpace/issues/60 is implemented.
-    cmd-esc = ['layout floating tiling', 'exec-and-forget open -g "rectangle://execute-action?name=center-half"', 'mode main']
+    cmd-backtick = ['layout floating tiling', 'exec-and-forget open -g "rectangle://execute-action?name=center-half"']
 
-    alt-h = ['move left', 'mode main']
-    alt-j = ['move down', 'mode main']
-    alt-k = ['move up', 'mode main']
-    alt-l = ['move right', 'mode main']
+    alt-h = ['move left']
+    alt-j = ['move down']
+    alt-k = ['move up']
+    alt-l = ['move right']
 
     alt-1 = ['move-node-to-workspace 1', 'workspace 1']
     alt-2 = ['move-node-to-workspace 2', 'workspace 2']
@@ -41,5 +41,5 @@ on-focused-monitor-changed = ['move-mouse monitor-lazy-center']
     alt-0 = ['move-node-to-workspace 0', 'workspace 0']
 
     alt-tab = 'move-workspace-to-monitor --wrap-around next'
-    alt-esc = ['reload-config', 'mode main']
+    alt-esc = ['reload-config']
 
