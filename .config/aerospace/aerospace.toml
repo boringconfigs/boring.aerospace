@@ -3,11 +3,11 @@ start-at-login = true
 # Mouse follows focus when focused monitor changes (default)
 on-focused-monitor-changed = ['move-mouse monitor-lazy-center']
 
+# On ultra wide monitors, make single windows floating and put them to center with a bit help from old friend, Rectangle app.
+# This is a workaround for widescreen displays until https://github.com/nikitabobko/AeroSpace/issues/60 is implemented.
+on-focus-changed = 'exec-and-forget ~/.config/aerospace/ultrawide.sh'
+
 [mode.main.binding]
-    cmd-shift-h = ['focus left']
-    cmd-shift-j = ['focus down']
-    cmd-shift-k = ['focus up']
-    cmd-shift-l = ['focus right']
 
     cmd-1 = 'workspace 1'
     cmd-2 = 'workspace 2'
@@ -20,26 +20,56 @@ on-focused-monitor-changed = ['move-mouse monitor-lazy-center']
     cmd-9 = 'workspace 9'
     cmd-0 = 'workspace 0'
 
-    # Make window floating and put it to center with a bit help from old friend, Rectangle app.
-    # This is a workaround for widescreen displays until https://github.com/nikitabobko/AeroSpace/issues/60 is implemented.
-    cmd-backtick = ['layout floating tiling', 'exec-and-forget open -g "rectangle://execute-action?name=center-half"']
+    1 = ['move-node-to-workspace 1', 'workspace 1', 'mode main']
+    2 = ['move-node-to-workspace 2', 'workspace 2', 'mode main']
+    3 = ['move-node-to-workspace 3', 'workspace 3', 'mode main']
+    4 = ['move-node-to-workspace 4', 'workspace 4', 'mode main']
+    5 = ['move-node-to-workspace 5', 'workspace 5', 'mode main']
+    6 = ['move-node-to-workspace 6', 'workspace 6', 'mode main']
+    7 = ['move-node-to-workspace 7', 'workspace 7', 'mode main']
+    8 = ['move-node-to-workspace 8', 'workspace 8', 'mode main']
+    9 = ['move-node-to-workspace 9', 'workspace 9', 'mode main']
+    0 = ['move-node-to-workspace 0', 'workspace 0', 'mode main']
 
-    alt-h = ['move left']
-    alt-j = ['move down']
-    alt-k = ['move up']
-    alt-l = ['move right']
+    alt-h = ['focus left', 'mode main']
+    alt-j = ['focus down', 'mode main']
+    alt-k = ['focus up', 'mode main']
+    alt-l = ['focus right', 'mode main']
 
-    alt-1 = ['move-node-to-workspace 1', 'workspace 1']
-    alt-2 = ['move-node-to-workspace 2', 'workspace 2']
-    alt-3 = ['move-node-to-workspace 3', 'workspace 3']
-    alt-4 = ['move-node-to-workspace 4', 'workspace 4']
-    alt-5 = ['move-node-to-workspace 5', 'workspace 5']
-    alt-6 = ['move-node-to-workspace 6', 'workspace 6']
-    alt-7 = ['move-node-to-workspace 7', 'workspace 7']
-    alt-8 = ['move-node-to-workspace 8', 'workspace 8']
-    alt-9 = ['move-node-to-workspace 9', 'workspace 9']
-    alt-0 = ['move-node-to-workspace 0', 'workspace 0']
+    alt-r = 'reload-config'
 
-    alt-tab = 'move-workspace-to-monitor --wrap-around next'
-    alt-esc = ['reload-config']
+    cmd-esc = 'mode command'
+    alt-esc = 'mode alt'
+    ctrl-esc = 'reload-config'
 
+[mode.command.binding]
+
+
+    cmd-1 = ['trigger-binding --mode command 1']
+    cmd-2 = ['trigger-binding --mode command 2']
+    cmd-3 = ['trigger-binding --mode command 3']
+    cmd-4 = ['trigger-binding --mode command 4']
+    cmd-5 = ['trigger-binding --mode command 5']
+    cmd-6 = ['trigger-binding --mode command 6']
+    cmd-7 = ['trigger-binding --mode command 7']
+    cmd-8 = ['trigger-binding --mode command 8']
+    cmd-9 = ['trigger-binding --mode command 9']
+    cmd-0 = ['trigger-binding --mode command 0']
+
+    esc = ['mode main']
+    cmd-esc = ['mode main']
+ 
+[mode.alt.binding]
+
+    h = ['move left', 'mode main']
+    j = ['move down', 'mode main']
+    k = ['move up', 'mode main']
+    l = ['move right', 'mode main']
+
+    alt-h = ['trigger-binding --mode alt h']
+    alt-j = ['trigger-binding --mode alt j']
+    alt-k = ['trigger-binding --mode alt k']
+    alt-l = ['trigger-binding --mode alt l']
+
+    esc = ['mode main']
+    alt-esc = ['trigger-binding --mode alt esc']
