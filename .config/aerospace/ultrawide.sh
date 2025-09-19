@@ -13,11 +13,9 @@ toggle-workspace-layout() {
 
 # If using ultrawide display and there is only one window, 
 # make the single window float and set it to have sensible width
-if [[ "$MONITOR" == "T34w-30" ]]; then
-  if [[ "$WINDOW_COUNT" -eq 1 ]]; then
-    toggle-workspace-layout floating
-    open -g "rectangle://execute-action?name=center-half"
-  else
-    toggle-workspace-layout tiling
-  fi
+if [[ "$WINDOW_COUNT" -eq 1 && "$MONITOR" == "T34w-30" ]]; then
+  toggle-workspace-layout floating
+  open -g "rectangle://execute-action?name=center-half"
+else
+  toggle-workspace-layout tiling
 fi
