@@ -16,28 +16,24 @@ on-focused-monitor-changed = ['move-mouse monitor-lazy-center']
     cmd-9 = 'workspace 9'
     cmd-0 = 'workspace 0'
 
-    cmd-h = ['focus left', 'mode main']
-    cmd-j = ['focus down', 'mode main']
-    cmd-k = ['focus up', 'mode main']
-    cmd-l = ['focus right', 'mode main']
+    cmd-backtick = ['focus dfs-next --boundaries-action wrap-around-the-workspace', 'mode main']
+    cmd-shift-backtick = ['focus dfs-prev --boundaries-action wrap-around-the-workspace', 'mode main']
 
-    # On ultra wide monitors, make single windows floating and put them to center with a bit help from old friend, Rectangle app.
-    # This is a workaround for widescreen displays until https://github.com/nikitabobko/AeroSpace/issues/60 is implemented.
-    cmd-backtick = 'exec-and-forget ~/.config/aerospace/ultrawide.sh'
+    cmd-esc = 'mode lock'
 
-    # Note: this binding assumes that esc is mapped to caps lock in MacOS settings
-    cmd-esc = 'mode esc'
+    alt-1 = ['move-node-to-workspace 1', 'workspace 1']
+    alt-2 = ['move-node-to-workspace 2', 'workspace 2']
+    alt-3 = ['move-node-to-workspace 3', 'workspace 3']
+    alt-4 = ['move-node-to-workspace 4', 'workspace 4']
+    alt-5 = ['move-node-to-workspace 5', 'workspace 5']
+    alt-6 = ['move-node-to-workspace 6', 'workspace 6']
+    alt-7 = ['move-node-to-workspace 7', 'workspace 7']
+    alt-8 = ['move-node-to-workspace 8', 'workspace 8']
+    alt-9 = ['move-node-to-workspace 9', 'workspace 9']
+    alt-0 = ['move-node-to-workspace 0', 'workspace 0']
 
-    alt-1 = ['move-node-to-workspace 1', 'workspace 1', 'mode main']
-    alt-2 = ['move-node-to-workspace 2', 'workspace 2', 'mode main']
-    alt-3 = ['move-node-to-workspace 3', 'workspace 3', 'mode main']
-    alt-4 = ['move-node-to-workspace 4', 'workspace 4', 'mode main']
-    alt-5 = ['move-node-to-workspace 5', 'workspace 5', 'mode main']
-    alt-6 = ['move-node-to-workspace 6', 'workspace 6', 'mode main']
-    alt-7 = ['move-node-to-workspace 7', 'workspace 7', 'mode main']
-    alt-8 = ['move-node-to-workspace 8', 'workspace 8', 'mode main']
-    alt-9 = ['move-node-to-workspace 9', 'workspace 9', 'mode main']
-    alt-0 = ['move-node-to-workspace 0', 'workspace 0', 'mode main']
+    alt-backtick = ['swap dfs-next --wrap-around']
+    alt-shift-backtick = ['swap dfs-prev --wrap-around']
 
     alt-h = ['move left']
     alt-j = ['move down']
@@ -46,8 +42,12 @@ on-focused-monitor-changed = ['move-mouse monitor-lazy-center']
 
     alt-r = 'reload-config'
 
-# escape mode for applying app specific cmd shortcuts
-[mode.esc.binding]
+    # On ultra wide monitors, make single windows floating and put them to center with a bit help from old friend, Rectangle app.
+    # This is a workaround for widescreen displays until https://github.com/nikitabobko/AeroSpace/issues/60 is implemented.
+    alt-esc = 'exec-and-forget ~/.config/aerospace/ultrawide.sh'
+
+# escape mode for applying app specific conflicting shortcuts
+[mode.lock.binding]
 
     cmd-esc = ['mode main']
     esc = ['mode main']
