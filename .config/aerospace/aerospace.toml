@@ -42,6 +42,8 @@ on-focused-monitor-changed = ['move-mouse monitor-lazy-center']
 
     alt-r = 'reload-config'
 
+    alt-tab = 'move-workspace-to-monitor --wrap-around next'
+
     # On ultra wide monitors, make single windows floating and put them to center with a bit help from old friend, Rectangle app.
     # This is a workaround for widescreen displays until https://github.com/nikitabobko/AeroSpace/issues/60 is implemented.
     alt-esc = 'exec-and-forget ~/.config/aerospace/bin/ultrawide.sh'
