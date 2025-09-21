@@ -35,18 +35,13 @@ on-focused-monitor-changed = ['move-mouse monitor-lazy-center']
     alt-backtick = ['swap dfs-next --wrap-around']
     alt-shift-backtick = ['swap dfs-prev --wrap-around']
 
-    alt-h = ['move left']
-    alt-j = ['move down']
-    alt-k = ['move up']
-    alt-l = ['move right']
-
     alt-r = 'reload-config'
 
     alt-tab = 'move-workspace-to-monitor --wrap-around next'
 
     # On ultra wide monitors, make single windows floating and put them to center with a bit help from old friend, Rectangle app.
     # This is a workaround for widescreen displays until https://github.com/nikitabobko/AeroSpace/issues/60 is implemented.
-    alt-esc = 'exec-and-forget ~/.config/aerospace/bin/ultrawide.sh'
+    alt-f = 'exec-and-forget ~/.config/aerospace/bin/ultrawide.sh'
 
 # escape mode for applying app specific conflicting shortcuts
 [mode.lock.binding]
