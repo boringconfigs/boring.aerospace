@@ -26,3 +26,4 @@ This configuration provides a basic setup for the Aerospace window manager with 
 | `Cmd` + `Esc` | Enter/Exit lock mode |
 | `Alt` + `r` | Reload configuration |
 | `Alt` + `f` | Toggle floating/tiling for single window on ultrawide |
+
