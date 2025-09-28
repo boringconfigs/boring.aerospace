@@ -27,3 +27,6 @@ This configuration provides a basic setup for the Aerospace window manager with 
 | `Alt` + `r` | Reload configuration |
 | `Alt` + `f` | Toggle floating/tiling for single window on ultrawide |
 
+## Installation
+
+You can find installation instructions from [here](https://github.com/boringconfigs/#installation).
