@@ -16,27 +16,23 @@ on-focused-monitor-changed = ['move-mouse monitor-lazy-center']
     cmd-9 = 'workspace 9'
     cmd-0 = 'workspace 0'
 
+    cmd-shift-1 = ['move-node-to-workspace 1', 'workspace 1']
+    cmd-shift-2 = ['move-node-to-workspace 2', 'workspace 2']
+    cmd-shift-3 = ['move-node-to-workspace 3', 'workspace 3']
+    cmd-shift-4 = ['move-node-to-workspace 4', 'workspace 4']
+    cmd-shift-5 = ['move-node-to-workspace 5', 'workspace 5']
+    cmd-shift-6 = ['move-node-to-workspace 6', 'workspace 6']
+    cmd-shift-7 = ['move-node-to-workspace 7', 'workspace 7']
+    cmd-shift-8 = ['move-node-to-workspace 8', 'workspace 8']
+    cmd-shift-9 = ['move-node-to-workspace 9', 'workspace 9']
+    cmd-shift-0 = ['move-node-to-workspace 0', 'workspace 0']
+
     cmd-backtick = ['focus dfs-next --boundaries-action wrap-around-the-workspace', 'mode main']
-    cmd-shift-backtick = ['focus dfs-prev --boundaries-action wrap-around-the-workspace', 'mode main']
+    cmd-shift-backtick = ['swap dfs-next --wrap-around']
 
     cmd-esc = 'mode lock'
 
-    alt-1 = ['move-node-to-workspace 1', 'workspace 1']
-    alt-2 = ['move-node-to-workspace 2', 'workspace 2']
-    alt-3 = ['move-node-to-workspace 3', 'workspace 3']
-    alt-4 = ['move-node-to-workspace 4', 'workspace 4']
-    alt-5 = ['move-node-to-workspace 5', 'workspace 5']
-    alt-6 = ['move-node-to-workspace 6', 'workspace 6']
-    alt-7 = ['move-node-to-workspace 7', 'workspace 7']
-    alt-8 = ['move-node-to-workspace 8', 'workspace 8']
-    alt-9 = ['move-node-to-workspace 9', 'workspace 9']
-    alt-0 = ['move-node-to-workspace 0', 'workspace 0']
-
-    alt-backtick = ['swap dfs-next --wrap-around']
-    alt-shift-backtick = ['swap dfs-prev --wrap-around']
-
     alt-r = 'reload-config'
-
     alt-tab = 'move-workspace-to-monitor --wrap-around next'
 
     # On ultra wide monitors, make single windows floating and put them to center with a bit help from old friend, Rectangle app.
